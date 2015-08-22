@@ -1,5 +1,4 @@
 
-
 function [] = batchranker1(VarName1,VarName3,VarName4,VarName5,VarName6,VarName7,t_correct)
 load 'rtfile.mat'
 r=(VarName1+VarName3+VarName4+VarName5+VarName6+VarName7)/6;

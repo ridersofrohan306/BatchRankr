@@ -1,0 +1,17 @@
+clc;
+clear all;
+close all;
+load 'rtfile.mat'
+clear t_correct;
+for i=1:201
+    c=0;
+    for j=1:length(t{i})
+        if(t{i}(1,j)==' '&& t{i}(1,j-1)==' ')
+            c=c+1;
+        else
+            t_correct{i,1}(1,j-c)=t{i}(1,j);
+        end
+        
+    end
+end
+save 'rtfile.mat'

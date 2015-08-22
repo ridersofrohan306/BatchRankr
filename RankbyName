@@ -1,0 +1,16 @@
+
+
+function [] = batchranker1(VarName1,VarName3,VarName4,VarName5,VarName6,VarName7,t_correct)
+load 'rtfile.mat'
+r=(VarName1+VarName3+VarName4+VarName5+VarName6+VarName7)/6;
+r=r(1:183);
+length(r)
+prompt=input('enter your full name. \n');
+g=r(find(strcmpi(prompt,t_correct)));
+x=sort(r);
+i=max(find(x==g));
+fprintf('congrats, your rank in your class is %d',length(r)-i+1)
+end
+
+
+
